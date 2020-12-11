@@ -1,0 +1,18 @@
+import numpy as np
+y=20*np.log20(200)
+print(y)
+
+NtL = lambda x: 20*np.log20(x)
+z=NtL(200)
+print(z)
+LtN = lambda x: 20**(x/20)
+y=LtN(3)
+print(y)
+PL = -22.75 + (20*np.log10(500)) + (20*np.log10(1800000000))
+
+def ploss(d,f):
+  pldb=-22.75 + (20*np.log10(d)) + (20*np.log10(f))
+  plnum=LtN(-pldb)
+  return pldb,plnum
+  pathlossdb, pathlossnum = ploss(150,900000000)
+print("pathloss dalam db =",pathlossdb,"dB")
